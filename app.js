@@ -11,9 +11,13 @@ function init() {
   const near = 0.1;
   const far = 500;
 
+  // Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
   camera.position.set(-50, 40, 350);
+
+  // renderer
+  renderer = new THREE.WebGLRenderer({ antialias: true });
 
   // Load Model
   let loader = new THREE.GLTFLoader();
