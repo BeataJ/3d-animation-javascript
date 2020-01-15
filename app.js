@@ -17,9 +17,9 @@ function init() {
   camera.position.set(-50, 40, 350);
 
   // renderer
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRadio(window.devicePixelRatio);
+  renderer.setPixelRatio(window.devicePixelRatio);
 
   container.appendChild(renderer.domElement);
 
@@ -27,5 +27,8 @@ function init() {
   let loader = new THREE.GLTFLoader();
   loader.load("./3D/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
+    renderer.render(scene, camera);
   });
 }
+
+init();
