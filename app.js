@@ -10,4 +10,6 @@ function init() {
   const aspect = container.clientWidth / container.clientHeight;
   const near = 0.1;
   const far = 500;
+
+  camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 }
