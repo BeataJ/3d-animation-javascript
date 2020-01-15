@@ -14,7 +14,7 @@ function init() {
   // Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
-  camera.position.set(-50, 40, 350);
+  camera.position.set(-6, 3, 30);
 
   // renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
