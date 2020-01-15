@@ -13,8 +13,10 @@ function init() {
 
   // Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-
   camera.position.set(-6, 3, 30);
+
+  const ambient = new THREE.AmbientLight(0x404040, 5);
+  scene.add(ambient);
 
   // renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
