@@ -18,6 +18,8 @@ function init() {
 
   // renderer
   renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRadio(window.devicePixelRatio);
 
   // Load Model
   let loader = new THREE.GLTFLoader();
