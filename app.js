@@ -14,4 +14,10 @@ function init() {
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
   camera.position.set(-50, 40, 350);
+
+  // Load Model
+  let loader = new THREE.GLTFLoader();
+  loader.load("./3D/scene.gltf", function(gltf) {
+    scene.add(gltf.scene);
+  });
 }
