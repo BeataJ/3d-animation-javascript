@@ -30,8 +30,14 @@ function init() {
   loader.load("./3D/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
     house = gltf.scene.children[0];
-    renderer.render(scene, camera);
+    animate();
   });
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  house.rotation.z += 0.005;
+  renderer.render(scene, camera);
 }
 
 init();
