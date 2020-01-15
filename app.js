@@ -4,4 +4,5 @@ function init() {
   container = document.querySelector(".scene");
 
   // Create scene
+  scene = new THREE.Scene();
 }
