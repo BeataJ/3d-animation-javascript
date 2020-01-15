@@ -21,6 +21,8 @@ function init() {
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRadio(window.devicePixelRatio);
 
+  container.appendChild(renderer.domElement);
+
   // Load Model
   let loader = new THREE.GLTFLoader();
   loader.load("./3D/scene.gltf", function(gltf) {
