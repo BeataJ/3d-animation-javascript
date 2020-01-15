@@ -15,7 +15,7 @@ function init() {
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.set(-6, 3, 30);
 
-  const ambient = new THREE.AmbientLight(0x404040, 5);
+  const ambient = new THREE.AmbientLight(0x404040, 3);
   scene.add(ambient);
 
   // renderer
@@ -29,6 +29,7 @@ function init() {
   let loader = new THREE.GLTFLoader();
   loader.load("./3D/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
+    house = gltf.scene.children[0];
     renderer.render(scene, camera);
   });
 }
